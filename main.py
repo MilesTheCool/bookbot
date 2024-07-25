@@ -42,16 +42,14 @@ def character_count(contents):
         char = char.lower()
         
         # check alphabet
-        if char in ['a','b','c','d','e','f','g','h','i','j','k','l',
-                    'm','n','o','p','q','r','s','t','u','v','w',
-                    'x','y','z']:
+        if char.isalpha():
             if char in alphabet_dict.keys():
                 alphabet_dict[char] += 1
             else:
                 alphabet_dict[char] = 1
                 
         # number
-        elif char in ['1','2','3','4','5','6','7','8','9','0']:
+        elif char.isdigit():
             if char in number_dict.keys():
                 number_dict[char] += 1
             else:
